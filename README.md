@@ -15,8 +15,6 @@ npm install
 npm run demo             # compile puis lance http://localhost:3000
 ```
 
-Pour la démo, utiliser `npm run demo` plutôt que `npm run dev` : en développement, React exécute les effets deux fois et le compteur de vues augmente de 2 par visite.
-
 `./init-db.sh` remet la base à zéro à tout moment.
 
 ## Tests
@@ -25,16 +23,6 @@ Pour la démo, utiliser `npm run demo` plutôt que `npm run dev` : en développe
 ./init-db.sh             # les tests supposent une base fraîchement recréée
 cd web && npm test       # 52 tests : requêtes, RLS, procédure noter, triggers
 ```
-
-## Parcours de démo
-
-1. **Catalogue** : rechercher « dark », filtrer un genre, ouvrir « Voir le SQL » (`rechercher_films`, M16.3).
-2. **Fiche Inception** : durée « 2 h 28 » (M10.1), note pondérée (M10.2), compteur de vues qui augmente à chaque visite (M15.2).
-3. **Choisir lea.reel** en haut à droite, puis noter 6 : refus de la procédure (M13.2). Noter 4 : la moyenne change, mise à jour par le trigger (M14.1).
-4. **Audit** (M14.2), dans un terminal :
-   `docker compose exec postgres psql -U postgres -d filmbox -c "SELECT * FROM audit_notes"`
-5. **Profil de lea.reel** : en tant que lea.reel, les entrées 🔒 privées sont visibles ; en tant que nolanfan, elles disparaissent (RLS, M16.2) et la compatibilité s'affiche (M10.3).
-6. **Classements** (M5.1, M5.2, M3.3, M10.2) et **Kevin Bacon** (Omar Sy : degré 2, M4.4).
 
 ## Organisation
 
