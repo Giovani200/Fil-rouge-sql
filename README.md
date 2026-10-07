@@ -1,4 +1,4 @@
-# FilmBox — front du fil rouge
+# FilmBox
 
 Front Next.js branché sur les scripts SQL du fil rouge (`sql/filmbox.sql`, `sql/filmbox-s2.sql`, `sql/filmbox-s4.sql`, `sql/filmbox-s5.sql`).
 Chaque bloc de l'interface a un panneau « Voir le SQL » qui montre la requête exécutée et sa mission.
